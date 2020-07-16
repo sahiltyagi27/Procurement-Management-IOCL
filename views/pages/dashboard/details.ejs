@@ -1,0 +1,22 @@
+<div class="container">
+        
+        <h1 class="display-4">Welcome to Message details</h1>
+        <p class="mb-4">This is sailsjs app built on MEAN stack for procurement management</p>
+        
+    <table class="table table-striped">
+                <thead>
+                    
+                    <th>Message</th>
+                
+                </thead> 
+                <tbody>
+                    <% vendor.forEach(function(object){%>
+                        <tr>
+                    
+                            <td><%= object.message %></td>
+                           
+                        </tr>
+                <%    }) %>
+                </tbody>
+    </table>
+</div>

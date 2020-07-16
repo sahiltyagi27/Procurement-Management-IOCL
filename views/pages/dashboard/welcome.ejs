@@ -1,0 +1,23 @@
+<div id="welcome">
+  <div class="container">
+      <img src="/assets/images/logo.png" alt="" width="100px">
+    <h1>Welcome!</h1>
+    <hr/>
+    <!--<p>This is a page that only logged-in people can visit. Don't you feel special? Try clicking on a button below to do some things you can't do when you're logged out.</p>-->
+    <div class="buttons">
+      <a class="btn btn-outline-info ml-2" href="/account/profile">Update my email</a>
+      <a class="btn btn-outline-info ml-2" href="/procurement">Procurements</a>
+      <a class="btn btn-outline-info ml-2" href="/add">Add Procurements</a>
+      <a class="btn btn-outline-info ml-2" href="/cont">Contact if you are a vendor</a>
+      <a class="btn btn-outline-info ml-2" href="/mes">Messages from vendors</a>
+    </div>
+  </div>
+
+  <router-view></router-view>
+
+  <!--  ╔═╗═╗ ╦╔═╗╔╦╗╔═╗╦  ╔═╗  ┌┬┐┌─┐┌┬┐┌─┐┬
+        ║╣ ╔╩╦╝╠═╣║║║╠═╝║  ║╣   ││││ │ ││├─┤│
+        ╚═╝╩ ╚═╩ ╩╩ ╩╩  ╩═╝╚═╝  ┴ ┴└─┘─┴┘┴ ┴┴─┘  -->
+      
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

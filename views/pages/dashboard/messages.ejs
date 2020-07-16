@@ -1,0 +1,31 @@
+<div class="container">
+        <img src="/assets/images/logo.png" alt="" width="100px">
+        <h1 class="display-4">Welcome to Message details</h1>
+        <p class="mb-4">This is sailsjs app built on MEAN stack for procurement management</p>
+        
+    <table class="table table-striped">
+                <thead>
+                    
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Topic</th>
+                    <th>Message</th>
+                    <th></th>
+                </thead> 
+                <tbody>
+                    <% vendor.forEach(function(procurements){%>
+                        <tr>
+                    
+                            <td><%= procurements.name %></td>
+                            <td><%= procurements.email %></td>
+                            <td><%= procurements.topic %></td>
+                            <td><%= procurements.message %></td>
+                            <td>
+                          <!--  <a href="/vendor/messages/<%= procurements.id %>" class="btn btn-primary">Read Message</a>-->
+                            <form action="/vendor/delete/<%= procurements.id %>" method="post" class="d-inline"><input type="submit" value="Delete" class="btn btn-danger"></form>                                 
+                            </td>
+                        </tr>
+                <%    }) %>
+                </tbody>
+    </table>
+</div>

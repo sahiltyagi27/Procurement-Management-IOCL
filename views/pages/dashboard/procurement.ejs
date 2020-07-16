@@ -1,0 +1,35 @@
+
+<div class="container">
+    <img src="/assets/images/logo.png" alt="" width="100px">
+    <h1 class="display-4">Welcome to Procurement details</h1>
+<p class="mb-4">This is sailsjs app built on MEAN stack for procurement management</p>
+<a href="/add" class="btn btn-outline-info ml-2">Add new procurement</a>
+<a class="btn btn-outline-info ml-2" href="/cont">Contact if you are a vendor</a>
+
+
+
+<table class="table table-striped">
+    <thead>
+        
+        <th>Title</th>
+        <th>Body</th>
+        <th>Number</th>
+        <th></th>
+    </thead> 
+    <tbody>
+        <% procurement.forEach(function(procurements){%>
+            <tr>
+        
+                <td><%= procurements.title %></td>
+                <td><%= procurements.body %></td>
+                <td><%= procurements.num %></td>
+                <td>
+                <!--    <a href="/procurement/edit/<%= procurements.id %>" class="btn btn-primary">Edit</a>-->
+                    <form action="/procurement/delete/<%= procurements.id %>" method="post" class=" d-inline"><input type="submit" class="btn btn-danger" value="Delete"></form>   
+                     
+                </td>
+            </tr>
+    <%    }) %>
+    </tbody>
+</table>
+</div>

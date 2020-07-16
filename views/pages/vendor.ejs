@@ -1,0 +1,23 @@
+<h1 class="display-4">Welcome to Procurement details</h1>
+<p class="mb-4">This is sailsjs app built on MEAN stack for procurement management</p>
+
+<a class="btn btn-outline-info ml-2" href="/contact">Contact if you are a vendor</a>
+
+<table class="table table-striped">
+    <thead>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Number</th>
+        <th></th>
+    </thead> 
+    <tbody>
+        <% procurement.forEach(function(procurements){%>
+            <tr>
+                <td><%= procurements.title %></td>
+                <td><%= procurements.body %></td>
+                <td><%= procurements.num %></td>
+                
+            </tr>
+    <%    }) %>
+    </tbody>
+</table>

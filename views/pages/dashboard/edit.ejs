@@ -1,0 +1,28 @@
+<div class="container">
+    <ol class="breadcrumb"> 
+        <li class="breadcrumb-item">Edit</li>
+    </ol>
+    <h1 class="display-4">Edit Procurement</h1>
+    
+    <form action="/update/<%= procurements.title%>" method="post">
+    <div class="form-group">
+            <% procurement.forEach(function(procurements){%>
+        <label for="title">Title</label>
+        <input type="text" name="title" class="form-control" value="<%= procurements.title %>">
+    
+    </div>
+    
+    <div class="form-group">
+            <label for="body">Body</label>
+            <textarea type="text" name="body" class="form-control"><%= procurements.title %></textarea>
+        
+        </div>
+        <div class="form-group">
+                <label for="number">Number</label>
+                <input type="number" name="num" class="form-control">
+            
+            </div>          
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <%    }) %>
+    </form>
+    </div>
